@@ -5,6 +5,7 @@ set mouse=a
 set nowrap
 set numberwidth=1
 syntax enable
+syntax on
 set showcmd
 set sw=2
 set hidden

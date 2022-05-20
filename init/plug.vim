@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 "Interfas
-Plug 'morhetz/gruvbox'
+Plug 'navarasu/onedark.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -18,6 +18,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'easymotion/vim-easymotion'
 
 "AutoClompletado CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

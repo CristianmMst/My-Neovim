@@ -1,14 +1,15 @@
 let mapleader = " "
 
 map <Leader>7 :Commentary<CR>
-" map <Leader>t :split<CR>:term<CR>
 
 nmap <Leader>q :q <CR>
 nmap <Leader>w :w <CR>
 
-nmap <Leader>n <Cmd>CocCommand explorer<CR>
-nmap <S-tab> :bn <CR> 
+nmap <tab> :bn <CR>
+nmap <S-tab> :bp <CR> 
 nmap <F5> :source % <CR> 
+nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>n <Cmd>CocCommand explorer<CR>
 
 nnoremap <Leader>; $a;<Esc>
 

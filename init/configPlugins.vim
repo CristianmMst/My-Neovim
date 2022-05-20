@@ -4,8 +4,16 @@ let g:loaded_netrwPlugin = 1
 let g:loaded_netrwSettings = 1
 let g:loaded_netrwFileHandlers = 1
 let g:loaded_matchit = 1
-"-------------------------------------------------------
-
+"-------------------- Rainbow Brackets -----------------
+let g:rainbow_active = 1
+" let g:rainbow_load_separately = [
+  " \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+  " \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+  " \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+  " \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+  " \ ]
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 "------------------Configuracion Coc-explorer-----------
 let g:coc_explorer_global_presets = {
 \   '.vim': {
@@ -64,10 +72,14 @@ if exists('#User#CocGitStatusChange')
   doautocmd <nomodeline> User CocGitStatusChange
 endif
 autocmd User CocNvimInit call AuCocNvimInit()
-"-------------------------------------------------------
+"-------------------- Tranparencia Nvim-----------------
+augroup VimCSS3Syntax
+  autocmd!
 
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
 "-----------------Configuracino De AirLine------------
-let g:airline_theme='base16_colors'
+let g:airline_theme='onedark'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -134,6 +146,3 @@ function! OpenTerminal()
   endif
 endfunction
 nnoremap <Leader>t :call OpenTerminal()<CR>
-
-
-
